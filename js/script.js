@@ -57,3 +57,129 @@ function aos_init() {
 $(window).on('load', function () {
     aos_init();
 });
+var bas = document.getElementById('basic').getContext('2d');
+var myChart = new Chart(bas, {
+    type: 'bar',
+    data: {
+        labels: ['HTML', 'CSS', 'JS'],
+        datasets: [{
+            label: 'percentage',
+            data: [100 , 95 , 75],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+var libe = document.getElementById('libraries').getContext('2d');
+var myChart = new Chart(libe, {
+    type: 'bar',
+    data: {
+        labels: ['jquery', 'Bootstrap', 'Chart.js' , 'datatable' , 'ckeditor' , 'uikit' , 'HeyUi' , 'venobox' , 'aos'],
+        datasets: [{
+            label: 'percentage',
+            data: [75 , 95 , 70 , 80 , 75 , 95 , 90 , 80 , 95],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 159, 64, 1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+var adva = document.getElementById('advanced').getContext('2d');
+var myChart = new Chart(adva, {
+    type: 'bar',
+    data: {
+        labels: ['scss', 'pug', 'axios'],
+        datasets: [{
+            label: 'percentage',
+            data: [90 , 85 , 70],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+var framework = document.getElementById('framework').getContext('2d');
+var myChart = new Chart(framework, {
+    type: 'bar',
+    data: {
+        labels: ['vue', 'nuxt'],
+        datasets: [{
+            label: 'percentage',
+            data: [90 , 70],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});

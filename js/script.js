@@ -160,15 +160,17 @@ var framework = document.getElementById('framework').getContext('2d');
 var myChart = new Chart(framework, {
     type: 'bar',
     data: {
-        labels: ['vue', 'nuxt'],
+        labels: ['vue', 'nuxt' ,'webpack'],
         datasets: [{
             label: 'percentage',
-            data: [90 , 70],
+            data: [90 , 70 , 60],
             backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(255, 159, 64, 0.2)'
             ],
             borderColor: [
+                'rgba(255, 99, 132, 1)',
                 'rgba(255, 99, 132, 1)',
                 'rgba(255, 159, 64, 1)'
             ],
@@ -183,3 +185,7 @@ var myChart = new Chart(framework, {
         }
     }
 });
+
+// name=true;
+// ahmed=false;
+// name ==ahmed?console.log("aaaaa"):console.log("dddd");

@@ -32,7 +32,7 @@ a:hover{
     margin-left: 2%;
     color: #fff;
 }
-.personal .bxl-facebook-circle:hover{
+.personal .fa-facebook:hover{
     color: #0A80EC;
     transition: all .6s ease-in-out;
     -webkit-transition: all .6s ease-in-out;
@@ -40,7 +40,7 @@ a:hover{
     -o-transition: all .6s ease-in-out;
     -ms-transition: all .6s ease-in-out;
 }
-.personal .bxl-github:hover{
+.personal .fa-github:hover{
     color: #000;
     transition: all .6s ease-in-out;
     -webkit-transition: all .6s ease-in-out;
@@ -48,7 +48,7 @@ a:hover{
     -o-transition: all .6s ease-in-out;
     -ms-transition: all .6s ease-in-out;
 }
-.personal .bxl-codepen:hover{
+.personal .fa-codepen:hover{
     color: #000;
     transition: all .6s ease-in-out;
     -webkit-transition: all .6s ease-in-out;
@@ -57,7 +57,7 @@ a:hover{
     -ms-transition: all .6s ease-in-out;
 
 }
-.personal .bxl-whatsapp:hover{
+.personal .fa-whatsapp:hover{
     color: #48c857;
     transition: all .6s ease-in-out;
     -webkit-transition: all .6s ease-in-out;
@@ -131,8 +131,8 @@ a:hover{
     margin-bottom: 0;
 }
 
-.portfolio .portfolio-item .portfolio-info .preview-link,
-.portfolio .portfolio-item .portfolio-info .details-link {
+.portfolio .portfolio-item .portfolio-info .preview-link
+{
     position: absolute;
     right: 40px;
     font-size: 24px;
@@ -141,13 +141,8 @@ a:hover{
     transition: 0.3s;
 }
 
-.portfolio .portfolio-item .portfolio-info .preview-link:hover,
-.portfolio .portfolio-item .portfolio-info .details-link:hover {
+.portfolio .portfolio-item .portfolio-info .preview-link:hover {
     color: #47b2e4;
-}
-
-.portfolio .portfolio-item .portfolio-info .details-link {
-    right: 10px;
 }
 
 .portfolio .portfolio-item:hover .portfolio-img img {

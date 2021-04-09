@@ -40,7 +40,6 @@ $(window).on('load', function () {
             filter: $(this).data('filter')
         });
     });
-    // Initiate venobox (lightbox feature used in portofilo)
     $(document).ready(function () {
         $('.venobox').venobox({
             'share': false
@@ -57,14 +56,15 @@ function aos_init() {
 $(window).on('load', function () {
     aos_init();
 });
+
 var bas = document.getElementById('basic').getContext('2d');
 var myChart = new Chart(bas, {
     type: 'bar',
     data: {
         labels: ['HTML', 'CSS', 'JS'],
         datasets: [{
-            label: 'percentage',
             data: [100 , 95 , 75],
+            label: 'percentage',
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -86,6 +86,7 @@ var myChart = new Chart(bas, {
         }
     }
 });
+
 var libe = document.getElementById('libraries').getContext('2d');
 var myChart = new Chart(libe, {
     type: 'bar',
@@ -185,7 +186,3 @@ var myChart = new Chart(framework, {
         }
     }
 });
-
-// name=true;
-// ahmed=false;
-// name ==ahmed?console.log("aaaaa"):console.log("dddd");

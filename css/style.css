@@ -1,3 +1,73 @@
+a:hover{
+    text-decoration: none;
+}
+.section-title{
+    padding-top: 3%;
+    text-align: center;
+}
+.section-title h2{
+    margin-bottom: 3%;
+}
+.personal{
+    background-color: #f4bb99;
+    padding-bottom: 3%;
+}
+@media (min-width: 992px) {
+    .personal {
+        height: 100vh;
+    }
+}
+
+.personal .section-title{
+    padding-top: 2% !important;
+}
+.personal .section-title h2{
+    margin-bottom: 2%;
+}
+.personal h3{
+    line-height: 2;
+}
+.personal .font-23{
+    font-size: 40px;
+    margin-left: 2%;
+    color: #fff;
+}
+.personal .bxl-facebook-circle:hover{
+    color: #0A80EC;
+    transition: all .6s ease-in-out;
+    -webkit-transition: all .6s ease-in-out;
+    -moz-transition: all .6s ease-in-out;
+    -o-transition: all .6s ease-in-out;
+    -ms-transition: all .6s ease-in-out;
+}
+.personal .bxl-github:hover{
+    color: #000;
+    transition: all .6s ease-in-out;
+    -webkit-transition: all .6s ease-in-out;
+    -moz-transition: all .6s ease-in-out;
+    -o-transition: all .6s ease-in-out;
+    -ms-transition: all .6s ease-in-out;
+}
+.personal .bxl-codepen:hover{
+    color: #000;
+    transition: all .6s ease-in-out;
+    -webkit-transition: all .6s ease-in-out;
+    -moz-transition: all .6s ease-in-out;
+    -o-transition: all .6s ease-in-out;
+    -ms-transition: all .6s ease-in-out;
+
+}
+.personal .bxl-whatsapp:hover{
+    color: #48c857;
+    transition: all .6s ease-in-out;
+    -webkit-transition: all .6s ease-in-out;
+    -moz-transition: all .6s ease-in-out;
+    -o-transition: all .6s ease-in-out;
+    -ms-transition: all .6s ease-in-out;
+}
+.personal .social{
+    padding-bottom: 3%;
+}
 .portfolio #portfolio-flters {
     list-style: none;
     margin-bottom: 20px;

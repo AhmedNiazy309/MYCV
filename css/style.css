@@ -159,3 +159,17 @@ a:hover{
     text-align: center;
 }
 }
+@media (max-width:576px){
+    .personal .h1{
+        font-size: 25px;
+    }
+    .personal .section-title h2{
+        font-size: 23px;
+    }
+    .personal h3{
+        font-size: 23px;
+    }
+    .personal .study{
+        font-size: 18px;
+    }
+}

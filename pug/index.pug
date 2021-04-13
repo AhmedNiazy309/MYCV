@@ -1,0 +1,234 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title CV
+  link(rel='stylesheet' href='css/bootstrap.min.css')
+  link(rel='stylesheet' href='css/owl.carousel.min.css')
+  link(rel='stylesheet' href='css/owl.theme.default.min.css')
+  link(rel='stylesheet' href='css/aos.css')
+  link(rel='stylesheet' href='css/all.css')
+  link(rel='stylesheet' href='css/venobox.css')
+  link(rel='stylesheet' href='css/jquery.fancybox.min.css')
+  link(rel='stylesheet' href='css/style.css')
+section.personal
+  .container-fluid
+    .section-title
+      h2 Personal identification
+    .row
+      .col-md-8.pl-5.pt-3
+        h2.h1
+          | Ahmed Niazy Maher
+        h3 20 year
+        h3 I Train in Ipda3 company
+        h3.study
+          | Studied at the Egyptian Higher Institute for Commerce and Computers, Computer Science department
+        .social
+          a(href='https://www.facebook.com/profile.php?id=100012457096514')
+            i.fab.font-23.fa-facebook
+          a(href='https://github.com/AhmedNiazy309')
+            i.fab.font-23.fa-github
+          a(href='https://codepen.io/DocTorWeB121')
+            i.fab.font-23.fa-codepen
+          a(href='https://api.whatsapp.com/send?phone=+201096710328')
+            i.fab.font-23.fa-whatsapp
+      .col-md-3
+        img.img-fluid(src='img/A.jpg' alt='')
+section.chart
+  .container-fluid
+    .section-title
+      h2 Skills
+    .row
+      .col-md-6
+        h2.basic Basic
+        canvas#basic
+      .col-md-6
+        h2 Libraries
+        canvas#libraries
+      .col-md-6
+        h2 Advanced
+        canvas#advanced
+      .col-md-6
+        h2 FrameWork
+        canvas#framework
+section#portfolio.portfolio
+  .container(data-aos='fade-up')
+    .section-title
+      h2 Ceritficate
+    ul#portfolio-flters(data-aos='fade-up')
+      li.filter-active.col(data-filter='*') All
+      li.col(data-filter='.filter-dsc') DSC
+      li.col(data-filter='.filter-ibm') IBM
+      li.col(data-filter='.filter-rwaq') Rwaq
+      li.col(data-filter='.filter-udemy') Udemy
+      li.col(data-filter='.filter-maharatech ') Maharatech
+      li.col(data-filter='.filter-ipda3') Ipda3
+      li.col(data-filter='.filter-sololearn') Solo learn
+    .row.portfolio-container(data-aos='fade-up')
+      .col-lg-4.col-md-6.portfolio-item.filter-dsc
+        .portfolio-img
+          img.img-fluid(src='img/certificate/1-min_optimized.webp' alt='')
+        .portfolio-info
+          h4 HTML&amp;&amp;CSS
+          p 15/12/2020
+          a.venobox.preview-link(href='img/certificate/1-min_optimized.webp' data-gall='portfolioGallery' title='DSC HTML && CSS')
+            i.fas.fa-plus
+      .col-lg-4.col-md-6.portfolio-item.filter-rwaq
+        .portfolio-img
+          img.img-fluid(src='img/certificate/2-min_optimized.webp' alt='')
+        .portfolio-info
+          h4 HTML&amp;&amp;CSS&amp;&amp;JS
+          p 17oct::31oct
+          a.venobox.preview-link(href='img/certificate/2-min_optimized.webp' data-gall='portfolioGallery' title='Rwaq')
+            i.fas.fa-plus
+      .col-lg-4.col-md-6.portfolio-item.filter-maharatech
+        .portfolio-img
+          img.img-fluid(src='img/certificate/3-min_optimized.webp' alt='')
+        .portfolio-info
+          h4 HTML Basic
+          p Maharatech
+          a.venobox.preview-link(href='img/certificate/3-min_optimized.webp' data-gall='portfolioGallery' title='Maharatech')
+            i.fas.fa-plus
+      .col-lg-4.col-md-6.portfolio-item.filter-ibm
+        .portfolio-img
+          img.img-fluid(src='img/certificate/4-min_optimized.webp' alt='')
+        .portfolio-info
+          h4 Front-End
+          p 12 Aug 2020
+          a.venobox.preview-link(href='img/certificate/4-min_optimized.webp' data-gall='portfolioGallery' title='IBM')
+            i.fas.fa-plus
+      .col-lg-4.col-md-6.portfolio-item.filter-ipda3
+        .portfolio-img
+          img.img-fluid(src='img/certificate/5-min_optimized.webp' alt='')
+        .portfolio-info
+          h4 Front-End Experiance certificate
+          p 31 Dec 2020
+          a.venobox.preview-link(href='img/certificate/5-min_optimized.webp' data-gall='portfolioGallery' title='Ipda3 certificate')
+            i.fas.fa-plus
+      .col-lg-4.col-md-6.portfolio-item.filter-ibm
+        .portfolio-img
+          img.img-fluid(src='img/certificate/6-min_optimized.webp' alt='')
+        .portfolio-info
+          h4 HTML &amp;&amp; CSS
+          p 14 Nov 2019
+          a.venobox.preview-link(href='img/certificate/6-min_optimized.webp' data-gall='portfolioGallery' title='IBM_certificate')
+            i.fas.fa-plus
+      .col-lg-4.col-md-6.portfolio-item.filter-ibm
+        .portfolio-img
+          img.img-fluid(src='img/certificate/7-min_optimized.webp' alt='')
+        .portfolio-info
+          h4 Java Script IBM certificarte
+          p 21 feb 2020
+          a.venobox.preview-link(href='img/certificate/7-min_optimized.webp' data-gall='portfolioGallery' title='IBM Certificate Java Script')
+            i.fas.fa-plus
+      .col-lg-4.col-md-6.portfolio-item.filter-udemy
+        .portfolio-img
+          img.img-fluid(src='img/certificate/8-min_optimized.webp' alt='')
+        .portfolio-info
+          h4 HTML CSS Beginner
+          p 18 dec 2019
+          a.venobox.preview-link(href='img/certificate/8-min_optimized.webp' data-gall='portfolioGallery' title='Udemy Certificate')
+            i.fas.fa-plus
+      .col-lg-4.col-md-6.portfolio-item.filter-ibm
+        .portfolio-img
+          img.img-fluid(src='img/certificate/9-min_optimized.webp' alt='')
+        .portfolio-info
+          h4 IBM Web devolopment Certificate
+          p 28 Feb 2020
+          a.venobox.preview-link(href='img/certificate/9-min_optimized.webp' data-gall='portfolioGallery' title='Web devolopment IBM Certificate')
+            i.fas.fa-plus
+      .col-lg-4.col-md-6.portfolio-item.filter-sololearn
+        .portfolio-img
+          img.img-fluid(src='img/certificate/cert-1023-7924987-min_optimized.webp' alt='')
+        .portfolio-info
+          h4 CSS Certificate SoloLearn
+          p 1 Nov 2019
+          a.venobox.preview-link(href='img/certificate/cert-1023-7924987-min_optimized.webp' data-gall='portfolioGallery' title='SoloLearn Certificate')
+            i.fas.fa-plus
+      .col-lg-4.col-md-6.portfolio-item.filter-sololearn
+        .portfolio-img
+          img.img-fluid(src='img/certificate/cert-7924987-1024-min_optimized.webp' alt='')
+        .portfolio-info
+          h4 Java Script SoloLearn Certificate 
+          p 9 Dec 2019
+          a.venobox.preview-link(href='img/certificate/cert-7924987-1024-min_optimized.webp' data-gall='portfolioGallery' title='JS Certificate')
+            i.fas.fa-plus
+      .col-lg-4.col-md-6.portfolio-item.filter-udemy
+        .portfolio-img
+          img.img-fluid(src='img/certificate/UC-4200b130-d77f-4fb8-9d5f-7915d55cd54b-min_optimized.webp' alt='')
+        .portfolio-info
+          h4 Udemy CSS Basic Certificate
+          p 2 oct 2020
+          a.venobox.preview-link(href='img/certificate/UC-4200b130-d77f-4fb8-9d5f-7915d55cd54b-min_optimized.webp' data-gall='portfolioGallery' title='Udemy Certificate')
+            i.fas.fa-plus
+      .col-lg-4.col-md-6.portfolio-item.filter-sololearn
+        .portfolio-img
+          img.img-fluid(src='img/certificate/HTML_certificate-min_optimized.webp' alt='')
+        .portfolio-info
+          h4 SoloLearn Certificate HTML
+          p 2 Feb 2020
+          a.venobox.preview-link(href='img/certificate/HTML_certificate-min_optimized.webp' data-gall='portfolioGallery' title='SoloLearn Certificate HTMl')
+            i.fas.fa-plus
+      .col-lg-4.col-md-6.portfolio-item.filter-dsc
+        .portfolio-img
+          img.img-fluid(src='img/certificate/20201105_233824-min_optimized.webp' alt='')
+        .portfolio-info
+          h4 Problem Solving DSC
+          p 5 NOV 2020
+          a.venobox.preview-link(href='img/certificate/20201105_233824-min_optimized.webp' data-gall='portfolioGallery' title='Problem Solving level 0 DSC')
+            i.fas.fa-plus
+section.Some_Works
+  .section-title
+    h2.text-center Some Works
+  .container-fluid
+    .row
+      .owl-carousel.client-carousel
+        div
+          a.gal-item.d-block(data-aos='fade-up' href='img/project/1-min.webp' data-fancybox='gal')
+            img.img-fluid.h-8(src='img/project/1-min.webp' alt='')
+        div
+          a.gal-item.d-block(data-aos='fade-up' href='img/project/2-min.webp' data-fancybox='gal')
+            img.img-fluid.h-8(src='img/project/2-min.webp' alt='')
+        div
+          a.gal-item.d-block(data-aos='fade-up' href='img/project/3-min.webp' data-fancybox='gal')
+            img.img-fluid.h-8(src='img/project/3-min.webp' alt='')
+        div
+          a.gal-item.d-block(data-aos='fade-up' href='img/project/4-min.webp' data-fancybox='gal')
+            img.img-fluid.h-8(src='img/project/4-min.webp' alt='')
+        div
+          a.gal-item.d-block(data-aos='fade-up' href='img/project/5-min.webp' data-fancybox='gal')
+            img.img-fluid.h-8(src='img/project/5-min.webp' alt='')
+        div
+          a.gal-item.d-block(data-aos='fade-up' href='img/project/6-min.webp' data-fancybox='gal')
+            img.img-fluid.h-8(src='img/project/6-min.webp' alt='')
+        div
+          a.gal-item.d-block(data-aos='fade-up' href='img/project/7-min.webp' data-fancybox='gal')
+            img.img-fluid.h-8(src='img/project/7-min.webp' alt='')
+        div
+          a.gal-item.d-block(data-aos='fade-up' href='img/project/8-min.webp' data-fancybox='gal')
+            img.img-fluid.h-8(src='img/project/8-min.webp' alt='')
+        div
+          a.gal-item.d-block(data-aos='fade-up' href='img/project/9-min.webp' data-fancybox='gal')
+            img.img-fluid.h-8(src='img/project/9-min.webp' alt='')
+        div
+          a.gal-item.d-block(data-aos='fade-up' href='img/project/10-min.webp' data-fancybox='gal')
+            img.img-fluid.h-8(src='img/project/10-min.webp' alt='')
+        div
+          a.gal-item.d-block(data-aos='fade-up' href='img/project/11-min.webp' data-fancybox='gal')
+            img.img-fluid.h-8(src='img/project/11-min.webp' alt='')
+        div
+          a.gal-item.d-block(data-aos='fade-up' href='img/project/12-min.webp' data-fancybox='gal')
+            img.img-fluid.h-8(src='img/project/12-min.webp' alt='')
+        div
+          a.gal-item.d-block(data-aos='fade-up' href='img/project/13-min.webp' data-fancybox='gal')
+            img.img-fluid.h-8(src='img/project/13-min.webp' alt='')
+script(src='js/jquery.min.js')
+script(src='js/bootstrap.min.js')
+script(src='js/jquery.fancybox.min.js')
+script(src='js/aos.js')
+script(src='js/chart.js')
+script(src='js/venobox.min.js')
+script(src='js/owl.carousel.min.js')
+script(src='js/isotope.pkgd.min.js')
+script(src='js/script.js')

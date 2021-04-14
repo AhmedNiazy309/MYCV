@@ -56,29 +56,36 @@ function aos_init() {
 $(window).on('load', function () {
     aos_init();
 });
-
+var bg_color = [
+    'rgba(255, 99, 132, 0.2)',
+    'rgba(54, 162, 235, 0.2)',
+    'rgba(255, 159, 64, 0.2)'
+];
+var border_color = [
+    'rgba(255, 99, 132, 1)',
+    'rgba(255, 99, 132, 1)',
+    'rgba(255, 159, 64, 1)'
+];
 var bas = document.getElementById('basic').getContext('2d');
 var myChart = new Chart(bas, {
-    type: 'bar',
+    type: 'doughnut',
     data: {
         labels: ['HTML', 'CSS', 'JS'],
         datasets: [{
-            data: [100 , 95 , 75],
-            label: 'percentage',
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
+            data: [100, 95, 75],
+            backgroundColor: bg_color,
+            borderColor: border_color,
             borderWidth: 1
         }]
     },
     options: {
+        
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+        },
         scales: {
             y: {
                 beginAtZero: true
@@ -89,42 +96,29 @@ var myChart = new Chart(bas, {
 
 var libe = document.getElementById('libraries').getContext('2d');
 var myChart = new Chart(libe, {
-    type: 'bar',
+    type: 'pie',
     data: {
-        labels: ['jquery', 'Bootstrap', 'Chart.js' , 'datatable' , 'ckeditor' , 'uikit' , 'HeyUi' , 'venobox' , 'aos'],
+        labels: ['jquery', 'Bootstrap', 'Chart.js', 'datatable', 'ckeditor', 'uikit', 'HeyUi', 'venobox', 'aos'],
         datasets: [{
+            data: [75, 95, 70, 80, 75, 95, 90, 80, 95],
             label: 'percentage',
-            data: [75 , 95 , 70 , 80 , 75 , 95 , 90 , 80 , 95],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 159, 64, 1)',
-            ],
+            backgroundColor: bg_color,
+            borderColor: border_color,
             borderWidth: 1
         }]
     },
     options: {
+        responsive: true,
+        interaction: {
+            mode: 'index',
+            intersect: false,
+        },
+        stacked: false,
+        plugins: {},
         scales: {
             y: {
-                beginAtZero: true
-            }
+                beginAtZero: true,
+            },
         }
     }
 });
@@ -134,18 +128,9 @@ var myChart = new Chart(adva, {
     data: {
         labels: ['scss', 'pug', 'axios'],
         datasets: [{
-            label: 'percentage',
-            data: [90 , 85 , 70],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
+            data: [90, 85, 70],
+            backgroundColor: bg_color,
+            borderColor: border_color,
             borderWidth: 1
         }]
     },
@@ -159,26 +144,71 @@ var myChart = new Chart(adva, {
 });
 var framework = document.getElementById('framework').getContext('2d');
 var myChart = new Chart(framework, {
-    type: 'bar',
+    type: 'line',
     data: {
-        labels: ['vue', 'nuxt' ,'webpack'],
+        labels: ['vue', 'nuxt', 'webpack'],
         datasets: [{
-            label: 'percentage',
-            data: [90 , 70 , 60],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(255, 99, 132, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
+            data: [90, 70, 60],
+            backgroundColor: bg_color,
+            borderColor: border_color,
+            borderWidth: 1,
+            fill: false,
+            stepped: true,
         }]
     },
     options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                labels: {
+                    generateLabels: function (chart) {
+                        // Get the default label list
+                        const original = Chart.overrides.pie.plugins.legend.labels.generateLabels;
+                        const labelsOriginal = original.call(this, chart);
+
+                        // Build an array of colors used in the datasets of the chart
+                        var datasetColors = chart.data.datasets.map(function (e) {
+                            return e.backgroundColor;
+                        });
+                        datasetColors = datasetColors.flat();
+
+                        // Modify the color and hide state of each label
+                        labelsOriginal.forEach(label => {
+                            // There are twice as many labels as there are datasets. This converts the label index into the corresponding dataset index
+                            label.datasetIndex = (label.index - label.index % 2) / 2;
+
+                            // The hidden state must match the dataset's hidden state
+                            label.hidden = !chart.isDatasetVisible(label.datasetIndex);
+
+                            // Change the color to match the dataset
+                            label.fillStyle = datasetColors[label.index];
+                        });
+
+                        return labelsOriginal;
+                    }
+                },
+                onClick: function (mouseEvent, legendItem, legend) {
+                    // toggle the visibility of the dataset from what it currently is
+                    legend.chart.getDatasetMeta(
+                        legendItem.datasetIndex
+                    ).hidden = legend.chart.isDatasetVisible(legendItem.datasetIndex);
+                    legend.chart.update();
+                }
+            },
+            tooltip: {
+                callbacks: {
+                    label: function (context) {
+                        const labelIndex = (context.datasetIndex * 2) + context.dataIndex;
+                        return context.chart.data.labels[labelIndex] + ': ' + context.formattedValue;
+                    }
+                }
+            }
+        },
+        responsive: true,
+        interaction: {
+            intersect: false,
+            axis: 'x'
+        },
         scales: {
             y: {
                 beginAtZero: true
